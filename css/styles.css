@@ -105,10 +105,12 @@ h1 {
 /* overlay image */
 .overlay img{
     max-height: 100%;
-    box-shadow: 0px 0px 10px 5  px rgb(90, 130, 146);
+    box-shadow: 0px 0px 10px 5px rgb(90, 130, 146);
 }
-/* .overlay:target img {
-} */
+.overlay:target img {
+    animation: zoomfade 800ms forwards;
+    -webkit-animation: zoomfade 800ms forwards;
+}
 
 /* overlay close */
 .overlay a {
@@ -126,4 +128,31 @@ h1 {
 }
 .overlay:target a:hover{
     margin-top: -2px;
+}
+.overlay:target a {
+    animation: slidedown 1s 200ms forwards;
+    -webkit-animation: slidedown 1s 200ms forwards;
+}
+
+/* keyframe */
+@keyframes zoomfade {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes slidedown {
+    0%{
+        opacity: 0;
+        margin-top: -10px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
 }
