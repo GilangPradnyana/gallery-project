@@ -1,6 +1,6 @@
 /* font */
-body {
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+body {
     background-color: #ddd;
 }
 /* header */
@@ -113,25 +113,50 @@ h1 {
 }
 
 /* overlay close */
-.overlay a {
+.overlay .close {
     position: absolute; 
     top: 68px;
-    margin-left: 145px;
+    margin-left: 140px;
     font-size: 20px;
     font-weight: bolder;
     color: #31363F;
-    font-family: 'Bebas Neue';
+    font-family: 'Montagu Slab';
     background-color: #ddd;
     padding: 2px;
     border: 2px solid #222831;
     box-shadow: 0px 0px 5px 2px;
 }
-.overlay:target a:hover{
+.overlay:target .close:hover{
     margin-top: -2px;
 }
-.overlay:target a {
+.overlay:target .close {
     animation: slidedown 1s  forwards;
     -webkit-animation: slidedown 1s  forwards;
+}
+
+/* previous and next */
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    width: 0px;
+    height: 0px;
+}
+.next {
+    background-image: url(../img/full/next.png);
+    margin-left: 50px;
+}
+.prev {
+    background-image: url(../img/full/previous.png);
+    margin-left: -110px;
+}
+.overlay:target .prev, .overlay:target .next {
+    width: 50px;
+    height: 50px;
+    animation: zoomfade 1s forwards;
+    -webkit-animation: zoomfade 1s forwards;
+}
+.next:hover, .prev:hover {
+    margin-top: -5px;
 }
 
 /* keyframe */
