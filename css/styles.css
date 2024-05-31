@@ -130,8 +130,8 @@ h1 {
     margin-top: -2px;
 }
 .overlay:target a {
-    animation: slidedown 1s 200ms forwards;
-    -webkit-animation: slidedown 1s 200ms forwards;
+    animation: slidedown 1s  forwards;
+    -webkit-animation: slidedown 1s  forwards;
 }
 
 /* keyframe */
