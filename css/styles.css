@@ -81,3 +81,35 @@ h1 {
     -ms-transform: scale(1) rotate(360deg);
     -o-transform: scale(1) rotate(360deg);
 }
+
+/* overlay */
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    text-align: center;
+    padding: 100px;
+}
+.overlay:target {
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,.5);
+}
+
+/* overlay image */
+.overlay img{
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 10px 5px rgb(90, 130, 146);
+}
+.overlay:target img {
+    width: auto;
+    height: auto;
+    text-align: center;
+    max-height: 100%;
+}
+
+
